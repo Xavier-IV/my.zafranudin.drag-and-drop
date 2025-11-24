@@ -91,16 +91,6 @@
             0%, 100% { opacity: 0.3; transform: scale(1); }
             50% { opacity: 0.5; transform: scale(1.05); }
         }
-
-        .step-connector {
-            position: absolute;
-            left: 2rem;
-            top: 4rem;
-            bottom: -2rem;
-            width: 1px;
-            background: linear-gradient(to bottom, rgba(45, 212, 191, 0.5), rgba(45, 212, 191, 0.1), transparent);
-            z-index: 0;
-        }
     </style>
 </head>
 <body class="antialiased selection:bg-teal-500/30 selection:text-teal-200">
@@ -114,7 +104,7 @@
     </div>
 
     <!-- Github Link -->
-    <a href="https://github.com" target="_blank" class="fixed top-6 right-6 z-50 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-xs font-medium text-white/70 hover:text-white transition-all backdrop-blur-md group shadow-lg">
+    <a href="https://github.com/Xavier-IV/my.zafranudin.drag-and-drop" target="_blank" class="fixed top-6 right-6 z-50 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-xs font-medium text-white/70 hover:text-white transition-all backdrop-blur-md group shadow-lg">
         <i data-lucide="github" class="w-3.5 h-3.5 group-hover:scale-110 transition-transform"></i>
         <span>View Source</span>
     </a>
@@ -153,7 +143,7 @@
                                 <p class="text-sm text-white/50 leading-relaxed">Skip the setup. Download a ready-to-deploy sample project.</p>
                             </div>
                         </div>
-                        <a href="sample.zip" download="" class="w-full sm:w-auto group relative px-5 py-2.5 rounded-lg bg-white text-black text-sm font-medium hover:bg-gray-200 transition-all shrink-0 flex items-center justify-center gap-2 shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]">
+                        <a href="https://github.com/Xavier-IV/my.zafranudin.drag-and-drop/archive/refs/heads/master.zip" class="w-full sm:w-auto group relative px-5 py-2.5 rounded-lg bg-white text-black text-sm font-medium hover:bg-gray-200 transition-all shrink-0 flex items-center justify-center gap-2 shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]">
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download sample.zip</span>
                         </a>
@@ -167,17 +157,17 @@
                 <!-- Step 1: Create Folder -->
                 <div class="relative pl-16 md:pl-24 reveal-on-scroll">
                     <!-- Connector Line -->
-                    <div class="step-connector"></div>
+                    <div class="absolute top-12 bottom-[-3rem] left-8 md:left-14 w-px bg-gradient-to-b from-teal-500/20 via-teal-500/5 to-transparent -z-10"></div>
                     
                     <!-- Number Badge -->
                     <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl number-badge flex items-center justify-center z-10">
-                        <span class="text-lg font-bold text-black">1</span>
+                        <span class="text-lg font-semibold text-black">1</span>
                     </div>
 
                     <div class="glass-card rounded-2xl p-8 group cursor-default">
                         <div class="flex items-start justify-between mb-4">
                             <div>
-                                <h3 class="text-xl font-medium text-white mb-2 tracking-tight">Create Project Folder</h3>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">Create Project Folder</h3>
                                 <p class="text-sm text-white/50 leading-relaxed">Start by creating a new folder on your computer to hold your project files. If you downloaded the sample, unzip it instead.</p>
                             </div>
                             <div class="p-3 bg-white/5 rounded-xl text-yellow-400 group-hover:scale-110 transition-transform duration-500">
@@ -193,16 +183,18 @@
 
                 <!-- Step 2: Create HTML File -->
                 <div class="relative pl-16 md:pl-24 reveal-on-scroll">
-                    <div class="step-connector"></div>
-                    <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center z-10 backdrop-blur-md">
-                        <span class="text-lg font-bold text-white">2</span>
+                    <!-- Connector Line -->
+                    <div class="absolute top-12 bottom-[-3rem] left-8 md:left-14 w-px bg-gradient-to-b from-white/10 via-white/5 to-transparent -z-10"></div>
+
+                    <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center z-10 backdrop-blur-md shadow-inner">
+                        <span class="text-lg font-semibold text-white">2</span>
                     </div>
 
                     <div class="glass-card rounded-2xl p-8 group cursor-default">
                         <div class="flex items-start justify-between mb-4">
                             <div>
-                                <h3 class="text-xl font-medium text-white mb-2 tracking-tight">Create index.html</h3>
-                                <p class="text-sm text-white/50 leading-relaxed">Inside your new folder, create a file named exactly <code class="text-teal-300 bg-teal-500/10 px-1.5 py-0.5 rounded text-xs">index.html</code>.</p>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">Create index.html</h3>
+                                <p class="text-sm text-white/50 leading-relaxed">Inside your new folder, create a file named exactly <code class="text-teal-300 bg-teal-500/10 px-1.5 py-0.5 rounded text-xs border border-teal-500/20">index.html</code>.</p>
                             </div>
                             <div class="p-3 bg-white/5 rounded-xl text-blue-400 group-hover:scale-110 transition-transform duration-500">
                                 <iconify-icon icon="solar:file-text-bold-duotone" width="32" height="32"></iconify-icon>
@@ -213,15 +205,17 @@
 
                 <!-- Step 3: Paste Content -->
                 <div class="relative pl-16 md:pl-24 reveal-on-scroll">
-                    <div class="step-connector"></div>
-                    <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center z-10 backdrop-blur-md">
-                        <span class="text-lg font-bold text-white">3</span>
+                    <!-- Connector Line -->
+                    <div class="absolute top-12 bottom-[-3rem] left-8 md:left-14 w-px bg-gradient-to-b from-white/10 via-white/5 to-transparent -z-10"></div>
+
+                    <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center z-10 backdrop-blur-md shadow-inner">
+                        <span class="text-lg font-semibold text-white">3</span>
                     </div>
 
                     <div class="glass-card rounded-2xl p-1 overflow-hidden group">
                         <div class="p-7 pb-2 flex items-start justify-between">
                             <div>
-                                <h3 class="text-xl font-medium text-white mb-2 tracking-tight">Add Your Content</h3>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">Add Your Content</h3>
                                 <p class="text-sm text-white/50 leading-relaxed mb-6">Paste the code generated by Lovable or Gemini into your file. If using the sample, skip this.</p>
                             </div>
                             <div class="p-3 bg-white/5 rounded-xl text-pink-400 group-hover:scale-110 transition-transform duration-500">
@@ -230,12 +224,12 @@
                         </div>
                         
                         <!-- Mock Code Editor -->
-                        <div class="bg-[#0D1117] rounded-xl border border-white/10 overflow-hidden mx-7 mb-7 shadow-2xl">
+                        <div class="bg-[#0D1117] rounded-xl border border-white/10 overflow-hidden mx-7 mb-7 shadow-2xl relative">
                             <div class="flex items-center px-4 py-3 border-b border-white/5 bg-white/[0.02]">
                                 <div class="flex gap-1.5">
-                                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/40"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/40"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/40"></div>
                                 </div>
                                 <span class="ml-4 text-xs text-white/30 font-mono">index.html</span>
                             </div>
@@ -255,14 +249,14 @@
 
                 <!-- Step 4: Netlify Link -->
                 <div class="relative pl-16 md:pl-24 reveal-on-scroll pb-10">
-                    <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center z-10 backdrop-blur-md">
-                        <span class="text-lg font-bold text-white">4</span>
+                    <div class="absolute left-2 md:left-8 top-0 w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center z-10 backdrop-blur-md shadow-inner">
+                        <span class="text-lg font-semibold text-white">4</span>
                     </div>
 
                     <div class="glass-card rounded-2xl p-8 group border-teal-500/30 hover:border-teal-400/50">
                         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                             <div>
-                                <h3 class="text-xl font-medium text-white mb-2 tracking-tight">Drop to Netlify</h3>
+                                <h3 class="text-xl font-semibold text-white mb-2 tracking-tight">Drop to Netlify</h3>
                                 <p class="text-sm text-white/50 leading-relaxed max-w-sm">Open Netlify Drop and simply drag your project folder (or the unzipped sample folder) onto the page.</p>
                             </div>
                             
